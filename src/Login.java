@@ -40,7 +40,7 @@ public class Login extends Application {
         Text scenetitle = new Text("Welcome");
         scenetitle.setId("welcome-text");
         scenetitle.setTextAlignment(TextAlignment.CENTER);
-        grid.add(scenetitle, 1, 0, 2, 1);
+        grid.add(scenetitle, 0, 0, 2, 1);
 
         Label userName = new Label("User name:");
         grid.add(userName, 0, 1);

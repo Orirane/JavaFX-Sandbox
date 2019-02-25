@@ -38,7 +38,7 @@ public class Login extends Application {
         primaryStage.setScene(scene);
 
         Text scenetitle = new Text("Welcome");
-        scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
+        scenetitle.setId("welcome-text");
         scenetitle.setTextAlignment(TextAlignment.CENTER);
         grid.add(scenetitle, 1, 0, 2, 1);
 
@@ -62,12 +62,16 @@ public class Login extends Application {
         grid.add(hbBtn, 1, 4);
 
         final Text actiontarget = new Text();
+        actiontarget.setId("actiontarget");
         grid.add(actiontarget, 1, 6);
 
         btn.setOnAction(actionEvent -> {
             actiontarget.setFill(Color.FIREBRICK);
             actiontarget.setText("Sign in button pressed");
         });
+
+        scene.getStylesheets().add
+                (Login.class.getResource("Login.css").toExternalForm());
 
         primaryStage.show();
     }
